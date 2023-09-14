@@ -1,25 +1,27 @@
-let btn = document.querySelector(".btn");
-let istaus = document.querySelector("h2");
-console.log(istaus);
+let box = document.querySelectorAll(".box");
+let box2 = document.querySelectorAll(".box2");
+const body = document.querySelector("body");
 
-let inp = 1 
-btn.addEventListener("click",function(){
+box.forEach(function(elm){
 
 
-    if (inp == 1){
+elm.addEventListener("click",function(e){
 
-        istaus.innerText = "Friend";
-        istaus.style.color = "green"
-        btn.innerText = "Remove Friend"
-        btn.style.backgroundColor = "red"
-        inp = 0;
-    } else {
-
-        istaus.innerText = "Stranger";
-        istaus.style.color = "red"
-        btn.innerText = "Add Friend"
-        btn.style.backgroundColor = "green"
-        inp = 1;
-    }
+    body.style.backgroundColor = e.target.id;
+     
+})
 
 })
+
+box2.forEach(function(elm){
+
+
+    elm.addEventListener("mouseover",function(e){
+    
+        body.style.backgroundColor = e.target.id;
+         
+    })
+    
+    })
+
+
